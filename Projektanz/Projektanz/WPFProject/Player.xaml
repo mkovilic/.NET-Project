@@ -1,0 +1,49 @@
+﻿<UserControl x:Class="WPFProject.Player"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WPFProject"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800"
+              HorizontalAlignment="Center"
+             VerticalAlignment="Center"
+             MouseDown="UserControl_MouseDown">
+             
+    <UserControl.Resources>
+        <Style TargetType="TextBlock">
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Foreground" Value="Black"/>
+            <Setter Property="TextWrapping" Value="Wrap"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+        </Style>
+    </UserControl.Resources>
+    <Grid Background="Transparent">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+
+        <Image Name="pImage"
+               Grid.Row="0"
+               Grid.ColumnSpan="2">
+        </Image>
+
+        <TextBlock Name="pNumber"
+                   Margin="5,5,5,5"
+               Grid.Row="1"
+               Grid.Column="0">
+        </TextBlock>
+
+        <TextBlock Name="pName"
+               Grid.Row="1"
+               Grid.Column="1">
+        </TextBlock>
+    </Grid>
+</UserControl>
